@@ -1,8 +1,4 @@
-
-
 int i, j;
-int SIN_1,SIN_2,SIN_3;
-
 int dats[16][32] = {
   1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
@@ -36,13 +32,12 @@ int main()
   {
     for ( i = 0; i < 16; i++) {
       for ( j = 0; j < 16; j++) {
+        digitalWrite(4,dats[i][0]);//data set
         digitalWrite(5,dats[i][j]);
         digitalWrite(6,dats[i][j + 16]);
         digitalWrite(9,HIGH);//clock up
         digitalWrite(9,LOW);
       }
-      digitalWrite(9,HIGH);//clock up
-      digitalWrite(9,LOW);
     }
 
     digitalWrite(7,HIGH);//latch
