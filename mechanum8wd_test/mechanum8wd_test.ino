@@ -9,23 +9,23 @@ mechanum wheel_out(300,450,30);
 int main()
 {
   double X, Y, A;
-  pinMode(,OUTPUT);
-  pinMode(,OUTPUT);
-  pinMode(,OUTPUT);
-  pinMode(,OUTPUT);
+  //pwm
+  pinMode(11,OUTPUT);
+  pinMode(10,OUTPUT);
+  pinMode(9,OUTPUT);
+  pinMode(6,OUTPUT);
+  //direction
+  pinMode(13,OUTPUT);
+  pinMode(12,OUTPUT);
+  pinMode(8,OUTPUT);
+  pinMode(7,OUTPUT);
 
-  pinMode(,OUTPUT);
-  pinMode(,OUTPUT);
-  pinMode(,OUTPUT);
-  pinMode(,OUTPUT);
-
-  X = 500;
+  X = 50;
   Y = 0;
   A = 0;
-  wheel_in.update();
-  whee_out.update();
-  analogWrite()
-  while (TRUE) {
+  wheel_in.update(X, Y, A);
+  whee_out.update(X, Y, A);
+  while (1) {
 
   }
 }
