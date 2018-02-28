@@ -20,9 +20,9 @@ int dats[16][32] = {
 
 int main()
 {
-  pinMode(4,OUTPUT);//SIN_1
-  pinMode(5,OUTPUT);//SIN_2
-  pinMode(6,OUTPUT);//SIN_3
+  pinMode(4,OUTPUT);//SIN_1 common
+  pinMode(5,OUTPUT);//SIN_2 columnA
+  pinMode(6,OUTPUT);//SIN_3 columnB
 
   pinMode(7,OUTPUT);//LATCH
   pinMode(8,OUTPUT);//ENABLE
@@ -32,9 +32,10 @@ int main()
   {
     for ( i = 0; i < 16; i++) {
       for ( j = 0; j < 16; j++) {
-        digitalWrite(4,dats[i][0]);//data set
-        digitalWrite(5,dats[i][j]);
-        digitalWrite(6,dats[i][j + 16]);
+        //data set
+        digitalWrite(4,dats[i][0]);       //common
+        digitalWrite(5,dats[i][j]);        //columnA
+        digitalWrite(6,dats[i][j + 16]);//columnB
         digitalWrite(9,HIGH);//clock up
         digitalWrite(9,LOW);
       }
