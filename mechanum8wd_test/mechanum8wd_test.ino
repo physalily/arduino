@@ -26,6 +26,6 @@ int main()
   wheel_in.update(X, Y, A);
   whee_out.update(X, Y, A);
   while (1) {
-
+    
   }
 }
