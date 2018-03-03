@@ -5,6 +5,7 @@ ________________________
 #include "mechanum.h"
 mechanum wheel_in(600,450,30);
 mechanum wheel_out(300,450,30);
+void drive();
 
 int main()
 {
@@ -20,12 +21,38 @@ int main()
   pinMode(8,OUTPUT);
   pinMode(7,OUTPUT);
 
-  X = 50;
-  Y = 0;
-  A = 0;
-  wheel_in.update(X, Y, A);
-  whee_out.update(X, Y, A);
   while (1) {
-    
+    X = 50;
+    Y = 0;
+    A = 0;
+    wheel_in.update(X, Y, A);
+    whee_out.update(X, Y, A);
+    drive();
+
+    X = 0;
+    Y = 0;
+    A = 3.1415;
+    wheel_in.update(X, Y, A);
+    whee_out.update(X, Y, A);
+    drive();
+
+    X = 0;
+    Y = 50;
+    A = 0;
+    whee_in.update(X, Y, A);
+    whee_out.update(X, Y, A);
+    drive();
+
+    X = -50;
+    Y = -50;
+    A = 0;
+    wheel_in.update(X, Y, A);
+    wheel_out.update(X, Y, A);
+    dirve();
   }
+}
+
+void drive()
+{
+
 }
