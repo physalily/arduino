@@ -5,6 +5,7 @@ ________________________
 #include "mechanum.h"
 mechanum wheel_in(600,450,30);
 mechanum wheel_out(300,450,30);
+mechanum SINGLE(750,750,100);
 void drive();
 
 int main()
@@ -28,6 +29,7 @@ int main()
     wheel_in.update(X, Y, A);
     whee_out.update(X, Y, A);
     drive();
+    delay(3000);
 
     X = 0;
     Y = 0;
@@ -35,6 +37,7 @@ int main()
     wheel_in.update(X, Y, A);
     whee_out.update(X, Y, A);
     drive();
+    delay(3000);
 
     X = 0;
     Y = 50;
@@ -42,6 +45,7 @@ int main()
     whee_in.update(X, Y, A);
     whee_out.update(X, Y, A);
     drive();
+    delay(3000);
 
     X = -50;
     Y = -50;
@@ -49,10 +53,16 @@ int main()
     wheel_in.update(X, Y, A);
     wheel_out.update(X, Y, A);
     dirve();
+    delay(3000);
   }
 }
 
 void drive()
+{
+
+}
+
+void MD(double pinA, double pinD, double POWER)
 {
 
 }
