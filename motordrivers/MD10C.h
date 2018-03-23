@@ -1,4 +1,5 @@
 /************************
+use arduino series.
 DIR   PWM   outA  outB
   *       0        0       0
   0      ~1       1       0
