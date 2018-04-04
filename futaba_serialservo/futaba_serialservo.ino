@@ -1,4 +1,4 @@
-int REDE = 2
+int REDE = 2;
 
 void setup(){
   pinMode(REDE, OUTPUT);
@@ -32,7 +32,7 @@ void torque(unsigned char ID, unsigned char data){
 }
 
 void Move_SV(unsigned char ID, int Angle, int Speed){
-  unsigned char TxData[10];
+  unsigned char TxData[12];
   unsigned char CheckSum = 0;
   TxData[0] = 0xFA;
   TxData[1] = 0xAF;
@@ -74,6 +74,6 @@ void loop(){
     }
     delay(500);
     Move_SV(0xFF, -300, 100);
-    delay(2000)
+    delay(2000);
   }
 }
