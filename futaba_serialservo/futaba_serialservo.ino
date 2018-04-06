@@ -1,11 +1,5 @@
 int REDE = 2;
 
-void setup(){
-  pinMode(REDE, OUTPUT);
-  Serial.begin(115200);
-  delay(500);
-}
-
 void torque(unsigned char ID, unsigned char data){
   unsigned char TxData[9];
   unsigned char CheckSum = 0;
@@ -59,6 +53,12 @@ void Move_SV(unsigned char ID, int Angle, int Speed){
   }
   delayMicroseconds(250);
   digitalWrite(REDE, LOW);
+}
+
+void setup(){
+  pinMode(REDE, OUTPUT);
+  Serial.begin(115200);
+  delay(500);
 }
 
 void loop(){
